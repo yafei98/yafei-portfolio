@@ -1,8 +1,6 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { ArrowDown, Briefcase, Mail } from 'lucide-react';
-import profile from '../app/profile.jpg'
-
 export default function Hero() {
   return (
     <section id="about" className="container mx-auto px-4 py-20 md:py-32">
@@ -34,7 +32,7 @@ export default function Hero() {
           <div className="relative w-64 h-64 md:w-80 md:h-80">
             <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl -z-10 animate-pulse" />
             <Image
-              src={profile}
+              src={'/images/profile.jpg'}
               alt="Yafei's Headshot"
               width={300}
               height={300}

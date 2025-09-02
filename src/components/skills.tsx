@@ -1,10 +1,10 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Code, Database, Settings, TerminalSquare, Wind } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
-
+import Image from "next/image";
 interface Skill {
   name: string;
-  icon: LucideIcon;
+  icon: string;
 }
 
 const skillCategories = [
@@ -12,40 +12,40 @@ const skillCategories = [
     title: 'Frontend',
     icon: Code,
     skills: [
-      { name: 'React', icon: Wind },
-      { name: 'Next.js', icon: Wind },
-      { name: 'TypeScript', icon: Code },
-      { name: 'Tailwind CSS', icon: Wind },
-      { name: 'HTML5 & CSS3', icon: Code },
+      { name: 'React', icon: "react" },
+      { name: 'Next.js', icon: "nextdotjs" },
+      { name: 'TypeScript', icon: "typescript" },
+      { name: 'Tailwind CSS', icon: "tailwindcss" },
+      { name: 'HTML5 & CSS3', icon: "html5" },
     ],
   },
   {
     title: 'Backend',
     icon: Database,
     skills: [
-      { name: 'Node.js', icon: TerminalSquare },
-      { name: 'Express', icon: TerminalSquare },
-      { name: 'Firebase', icon: Database },
-      { name: 'PostgreSQL', icon: Database },
-      { name: 'REST APIs', icon: TerminalSquare },
+      { name: 'Node.js', icon: "nodedotjs" },
+      { name: 'Express', icon: "express" },
+      { name: 'MySQL', icon: "mysql" },
+      { name: 'PostgreSQL', icon: "postgresql" },
+      { name: 'MongoDB', icon: "mongodb" },
+      { name: 'REST APIs', icon: "rest-api-icon" },
     ],
   },
   {
     title: 'Tools & DevOps',
     icon: Settings,
     skills: [
-      { name: 'Git & GitHub', icon: Settings },
-      { name: 'Docker', icon: Settings },
-      { name: 'Vercel', icon: Wind },
-      { name: 'Genkit AI', icon: TerminalSquare },
-      { name: 'Zod', icon: Code },
+      { name: 'Git & GitHub', icon: "github" },
+      { name: 'Docker', icon: "docker" },
+      { name: 'Vercel', icon: "vercel" },
     ],
   },
 ];
 
-const SkillItem = ({ name, icon: Icon }: Skill) => (
+const SkillItem = ({ name, icon }: Skill) => (
   <div className="flex items-center gap-3 p-3 bg-background/50 rounded-lg transition-transform hover:scale-105 hover:bg-background">
-    <Icon className="h-6 w-6 text-primary" />
+     <Image src={`/images/${icon}.svg`} alt="profile" width={30} height={30} style={{
+    filter: 'var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) invert(100%) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)'}} />
     <span className="font-medium text-foreground/90">{name}</span>
   </div>
 );
