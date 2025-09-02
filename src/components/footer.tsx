@@ -1,4 +1,5 @@
-import { Code2, Github, Linkedin, Twitter } from 'lucide-react';
+'use client';
+import { Code2, Github, Linkedin, Phone, Mail } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Footer() {
@@ -14,14 +15,21 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Yafei. All rights reserved.
           </p>
           <div className="flex space-x-4">
-            <a href="#" aria-label="GitHub" className="text-foreground/60 hover:text-primary transition-colors">
+            <a href="https://github.com/yafei98" aria-label="GitHub" className="text-foreground/60 hover:text-primary transition-colors">
               <Github className="h-7 w-7" />
             </a>
-            <a href="#" aria-label="LinkedIn" className="text-foreground/60 hover:text-primary transition-colors">
+            <a href="https://www.linkedin.com/in/mira-li-327565288/" aria-label="LinkedIn" className="text-foreground/60 hover:text-primary transition-colors">
               <Linkedin className="h-7 w-7" />
             </a>
-            <a href="#" aria-label="Twitter" className="text-foreground/60 hover:text-primary transition-colors">
-              <Twitter className="h-7 w-7" />
+            <a onClick={() => alert("📞 089 230 2085")} target="" aria-label="Phone" className="text-foreground/60 hover:text-primary transition-colors">
+              <Phone className="h-7 w-7" />
+            </a>
+            <a
+              aria-label="Phone"
+              href="mailto:yafei.dev@gmail.com"
+              className="text-foreground/60 hover:text-primary transition-colors"
+            >
+              <Mail className="h-7 w-7" />
             </a>
           </div>
         </div>
