@@ -14,38 +14,53 @@ const skillCategories = [
     skills: [
       { name: 'React', icon: "react" },
       { name: 'Next.js', icon: "nextdotjs" },
+      { name: 'JavaScript', icon: "javascript" },
       { name: 'TypeScript', icon: "typescript" },
       { name: 'Tailwind CSS', icon: "tailwindcss" },
+      { name: 'Redux', icon: "redux" },
       { name: 'HTML5 & CSS3', icon: "html5" },
+      { name: 'Vite & Webpack', icon: "vite" },
+      { name: 'ESLint', icon: "eslint" },
+      { name: 'Prettier', icon: "prettier" },
     ],
   },
   {
-    title: 'Backend',
+    title: 'Tools & Collaboration',
+    icon: Settings,
+    skills: [
+      { name: 'Git & GitHub', icon: "github" },
+      { name: 'GitLab CI', icon: "gitlab" },
+      { name: 'Jira', icon: "jira" },
+      { name: 'Vercel', icon: "vercel" },
+      { name: 'Figma', icon: "figma" },
+    ],
+  },
+  {
+    title: 'Also used',
     icon: Database,
     skills: [
       { name: 'Node.js', icon: "nodedotjs" },
       { name: 'Express', icon: "express" },
+      { name: 'REST APIs', icon: "rest-api-icon" },
+      { name: 'Java', icon: "java" },
+      { name: 'Python', icon: "python" },
+      { name: 'C#', icon: "c" },
+      { name: 'Swagger', icon: "swagger" },
+      { name: 'Postman', icon: "postman" },
+      { name: 'Docker', icon: "docker" },
+      { name: 'JWT', icon: "jwt" },
       { name: 'MySQL', icon: "mysql" },
       { name: 'PostgreSQL', icon: "postgresql" },
       { name: 'MongoDB', icon: "mongodb" },
-      { name: 'REST APIs', icon: "rest-api-icon" },
-    ],
-  },
-  {
-    title: 'Tools & DevOps',
-    icon: Settings,
-    skills: [
-      { name: 'Git & GitHub', icon: "github" },
-      { name: 'Docker', icon: "docker" },
-      { name: 'Vercel', icon: "vercel" },
     ],
   },
 ];
 
 const SkillItem = ({ name, icon }: Skill) => (
   <div className="flex items-center gap-3 p-3 bg-background/50 rounded-lg transition-transform hover:scale-105 hover:bg-background">
-     <Image src={`/images/${icon}.svg`} alt="profile" width={30} height={30} style={{
-    filter: 'var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) invert(100%) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)'}} />
+    <Image src={`/images/${icon}.svg`} alt="profile" width={30} height={30} style={{
+      filter: 'var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) invert(100%) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)'
+    }} />
     <span className="font-medium text-foreground/90">{name}</span>
   </div>
 );

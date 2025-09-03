@@ -49,7 +49,7 @@ export default function Header() {
                 {link.label}
               </Link>
             ))}
-             {/* <Link href="/resume">
+            {/* <Link href="/resume">
                 <Button size={"3"} variant="outline">Resume Download</Button>
             </Link> */}
           </nav>
@@ -75,9 +75,9 @@ export default function Header() {
                 {link.label}
               </Link>
             ))}
-             <Link href="/resume" onClick={() => setIsOpen(false)}>
-                <Button>Resume AI</Button>
-            </Link>
+            {/* <Link href="/resume" onClick={() => setIsOpen(false)}>
+                <Button>Resume Download</Button>
+            </Link> */}
           </nav>
         </div>
       )}
